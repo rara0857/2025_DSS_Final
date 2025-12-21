@@ -11,7 +11,7 @@ def plot_racetrack_sequences(sequences, labels, title="Racetrack Memory Decoding
         
     data = np.array(padded_seqs)
     
-    fig, ax = plt.subplots(figsize=(12, len(sequences) * 1.2))
+    fig, ax = plt.subplots(figsize=(12, max(len(sequences) * 1.2, 3)))
     
     masked_data = np.ma.masked_where(data == -1, data)
     
